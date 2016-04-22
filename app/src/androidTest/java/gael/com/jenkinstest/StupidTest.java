@@ -12,6 +12,8 @@ import static android.support.test.espresso.Espresso.*;
 import static android.support.test.espresso.matcher.ViewMatchers.*;
 import static android.support.test.espresso.action.ViewActions.*;
 import static android.support.test.espresso.assertion.ViewAssertions.*;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
 
 /**
  * Created by aurelien on 20/04/16.
@@ -27,6 +29,11 @@ public class StupidTest {
     public void testClickOnTheFabForAbsolutlyNoReasonIndeedItWontDoAThingAnyway() {
         onView(withId(R.id.fab)).perform(click());
         onView(withId(R.id.fab)).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void testIfThisTestWillFailAsItShould() {
+        assertThat(2, is(equalTo(4)));
     }
 
 }
