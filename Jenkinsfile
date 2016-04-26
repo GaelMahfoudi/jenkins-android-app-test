@@ -1,7 +1,7 @@
 node {
 
     stage 'Ultimate try !'
-    printl $WORKSPACE
+    printl ${env.BRANCH_NAME}
     build job: 'test'
 
 }
