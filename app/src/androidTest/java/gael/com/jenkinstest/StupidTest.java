@@ -27,6 +27,7 @@ public class StupidTest {
 
     @Test
     public void testClickOnTheFabForAbsolutlyNoReasonIndeedItWontDoAThingAnyway() {
+        //YOOOOO
         onView(withId(R.id.fab)).perform(click());
         onView(withId(R.id.fab)).check(matches(isDisplayed()));
     }
