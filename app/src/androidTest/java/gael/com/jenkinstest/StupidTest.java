@@ -35,6 +35,7 @@ public class StupidTest {
     @Test
     public void testIfThisTestWillFailAsItShould() {
         //a comment
+        //Double useless comment
         assertThat(2, is(equalTo(2)));
     }
 
