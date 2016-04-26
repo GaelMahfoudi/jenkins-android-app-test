@@ -1,6 +1,6 @@
 node {
 
     stage 'Ultimate try !'
-    build job: 'my-app-pipeline'
+    build job: 'my-app/my-app-pipeline'
 
 }
