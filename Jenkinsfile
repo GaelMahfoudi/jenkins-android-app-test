@@ -2,7 +2,7 @@ node {
 
     stage 'Ultimate try !'
     def path = sh 'pwd'
-    sh '$path'
+    sh 'echo $path'
     build job: 'test'
 
 }
