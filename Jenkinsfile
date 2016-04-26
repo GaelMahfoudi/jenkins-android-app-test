@@ -1,7 +1,16 @@
 node {
-    stage 'Build'
-    //Checkout Branches
+
+    stage 'Checkout'
     checkout scm
 
-    sh 'echo hello world'
+    stage 'Unit testing'
+    sh 'chmod +x gradlew'
+    sh './gradlew test'
+
+    stage 'Integration test'
+
+
+    stage 'End'
+    sh 'echo this is the end !'
+
 }
