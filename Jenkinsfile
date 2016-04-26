@@ -1,8 +1,7 @@
 node {
 
     stage 'Ultimate try !'
-    sh 'pwd'
-    def path = "pwd".execute().text
+    printl $WORKSPACE
     build job: 'test'
 
 }
