@@ -1,8 +1,8 @@
 node {
 
-    stage 'Ultimate try !'
-    def path = sh 'pwd'
-    printl path
-    build job: 'test'
+    stage 'Ultimate try !';
+    def path = new File(".").getCanonicalPath();
+    printl path;
+    build job: 'test';
 
 }
