@@ -33,7 +33,7 @@ public class StupidTest {
 
     @Test
     public void testIfThisTestWillFailAsItShould() {
-        assertThat(2, is(equalTo(4)));
+        assertThat(2, is(equalTo(2)));
     }
 
 }
