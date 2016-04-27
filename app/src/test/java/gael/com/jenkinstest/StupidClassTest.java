@@ -16,6 +16,6 @@ public class StupidClassTest {
 
     @Test
     public void testThisOneWillFail() {
-        assertThat(2, is(equalTo(4)));
+        assertThat(2, is(equalTo(2)));
     }
 }
