@@ -13,4 +13,9 @@ public class StupidClassTest {
     public void testTheStupidClass() {
         assertThat(StupidClass.returnTwo(), is(equalTo(2)));
     }
+
+    @Test
+    public void testThisOneWillFail() {
+        assertThat(2, is(equalTo(4)));
+    }
 }
