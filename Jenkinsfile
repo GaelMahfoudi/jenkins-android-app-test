@@ -1,7 +1,20 @@
+
 node {
-    //Test
-    stage 'JenkinsTest build process'
+
+    /**
+     * Your app name
+     */
+    def APPNAME = "jean-guy"
+
+    stage 'Build'
+
+    /**
+     * Get the name of the branch that triggered the build.
+     */
     def branchName = "${env.BRANCH_NAME}"
-    def branchBuildNumber = "${env.BUILD_NUMBER}"
-    build job: 'my-app/my-app-pipeline', parameters: [[$class: 'StringParameterValue', name: 'BRANCH', value: branchName], [$class: 'StringParameterValue', name: 'BUILDNUMBER', value: branchBuildNumber]]
+
+    /**
+     * Start the pipeline for this build.
+     */
+    build job: "${APPNAME}/${APPNAME}-pipeline", parameters: [[$class: 'StringParameterValue', name: 'BRANCH', value: branchName]]
 }
