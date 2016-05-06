@@ -1,20 +1,7 @@
-
 node {
+    def BRANCH = "${env.BRANCH_NAME}"
+    def BUILDNUMBER = "${env.BUILD_NUMBER}"
 
-    /**
-     * Your app name
-     */
-    def APPNAME = "jean-guy"
-
-    stage 'Build'
-
-    /**
-     * Get the name of the branch that triggered the build.
-     */
-    def branchName = "${env.BRANCH_NAME}"
-
-    /**
-     * Start the pipeline for this build.
-     */
-    build job: "${APPNAME}/${APPNAME}-pipeline", parameters: [[$class: 'StringParameterValue', name: 'BRANCH', value: branchName]]
+    sh "mkdir -p ../../common-workspace-$BRANCH-$BUILDNUMBER"
+    sh "cp -r * ../../common-workspace-$BRANCH-$BUILDNUMBER/"
 }
