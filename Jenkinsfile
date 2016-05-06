@@ -3,5 +3,5 @@ node {
     def BUILDNUMBER = "${env.BUILD_NUMBER}"
 
     sh "mkdir -p ../../common-workspace-$BRANCH-$BUILDNUMBER"
-    sh "cp -r * ../../common-workspace-$BRANCH-$BUILDNUMBER/"
+    sh "cp -r ../$BRANCH@script/* ../../common-workspace-$BRANCH-$BUILDNUMBER/"
 }
